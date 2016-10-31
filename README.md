@@ -1,4 +1,5 @@
 # WDT (Web Development Toolkit)
+###### Note: This website was created as a project for CS 146: Introduction to Web Development at Stevens Institute of Technlology. I am not the sole author of the code used. Author names are displayed in relevant files and at the bottom of this README.
 ## About
 Our site is meant to serve as an aid to students or independent learners looking
 to learn about web developement. What our page offers is a centralized place for
