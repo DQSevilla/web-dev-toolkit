@@ -1,13 +1,9 @@
 /** Base Conversion functions for the Calculators page */
 
-console.log(fromDecimal(5, 2)); // returns 101
-console.log(fromDecimal(9, 8)); // returns 11
-console.log(fromDecimal(10, 16)); // returns 'A'
-
 /**
  * Converts a decimal number to a given base representation.
- * @param {number} newBase - the new base
  * @param {number} dec - a base 10 number
+ * @param {number} newBase - the new base
  * @return {number} the converted number
  */ 
 function fromDecimal(dec, newBase) {
@@ -21,37 +17,48 @@ function fromDecimal(dec, newBase) {
 
 /**
  * Converts a binary number to a given base representation.
- * @param {number} bin - a binary number
+ * @param {string} bin - a binary number
  * @param {number} newBase - the new base
  * @return {number} the converted number
  */ 
 function fromBinary(bin, newBase) {
-    if(newBase === 10) {
-        return binToDec(bin);
-    }
-    else if(newBase === 16) {
-        return binToOther(bin, 4);
-    }
-    return binToOther(bin, 3);
+    return fromDecimal(parseInt(bin, 2), newBase);
 }
 
-function binToDec(bin) {
-    var len = bin.length();
-    var dec = 0;
+/**
+ * Converts an octal number to a given base representation.
+ * @param {string} oct - an octal number
+ * @param {number} newBase - the new base
+ * @return {number} the converted number
+ */
+function fromOctal(oct, newBase) {
+    return fromDecimal(parseInt(oct, 8), newBase);
 }
 
-function binToOther(bin, n) {
-    
+/**
+ * Converts an hexacedimal number to a given base representation.
+ * @param {string} hex - an octal number
+ * @param {number} newBase - the new base
+ * @return {number} the converted number
+ */
+function fromHexadecimal(hex, newBase) {
+    return fromDecimal(parseInt(hex, 16), newBase);
 }
 
+/**
+ * Modifies incoming integers to represent the correct digit in a
+ * converted number, supporting bases 2 to 26, returning letters
+ * where appropriate.
+ * @param {number} num - a decimal number
+ * @return {string} the original number or a mapped base 16 letter
+ */
 function letterMap(num) {
-    switch(num) {
-        case 10: return "A";
-        case 11: return "B";
-        case 12: return "C";
-        case 13: return "D";
-        case 14: return "E";
-        case 15: return "F";
-        default: return num;
+    if(num > 26) {
+        return "Input Error";
     }
+    if(num < 10) {
+        return num;
+    }
+    
+    return String.fromCharCode('A'.charCodeAt() + num - 10);
 }
