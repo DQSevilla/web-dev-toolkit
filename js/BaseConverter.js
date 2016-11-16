@@ -7,6 +7,7 @@
  * @return {number} the converted number
  */ 
 function fromDecimal(dec, newBase) {
+    if(dec === 0) return "0";
     var digits = "";
     while(dec > 0) {
         digits = letterMap(dec % newBase) + digits;
