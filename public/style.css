@@ -4,13 +4,14 @@
 }
 
 #headimg{
+  display:block;
   width:30%;
+  max-width:264px;
 }
 
 #navbar{
   position:relative;
 }
-
 #topbar{
   left:0;
   padding-left:0;
@@ -26,11 +27,29 @@
 #topbar li:hover{
   background-color:teal;
 }
-
 #searchbar{
   right:0;
   position: absolute;
   top:7px;
+}
+#menu_button{
+  display:none;
+  background-color:#0060FF;
+  color:white;
+  padding:10px;
+  float:left;
+  font-size:large;
+  border:none;
+}
+#menu_button:hover{
+  background-color: teal;
+}
+#menu_icon{
+  height: 21px;
+}
+
+hr{
+  width:100%;
 }
 
 /* css sucks, but not as much as JavaScript */
@@ -101,6 +120,16 @@
 
 .span_1_of_12 {
   	width: 6.866%;
+}
+ 
+/*Below 790px wide search and navbar overlap. Fix?*/
+@media only screen and (max-width: 790px) {
+  #topbar{
+    display: none;
+  }
+  #menu_button{
+    display: block;
+  }
 }
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
