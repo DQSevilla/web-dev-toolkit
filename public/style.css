@@ -1,13 +1,23 @@
+* {
+  /*font-family: 'Roboto', sans-serif;*/
+}
+body{
+  background-color:#E7CD7E;
+}
+a{
+  text-decoration:none;
+}
+
 #contactus{
   margin-left:10px;
   margin-right:10px;
 }
 
 #headimg{
-  display:block;
+  display:inline;
   width:30%;
   max-width:264px;
-}
+} 
 
 #navbar{
   position:relative;
@@ -36,7 +46,6 @@
   display:none;
   background-color:#0060FF;
   color:white;
-  padding:10px;
   float:left;
   font-size:large;
   border:none;
@@ -47,9 +56,27 @@
 #menu_icon{
   height: 21px;
 }
+#dropdown_menu{
+  display:none;
+}
+#menu_button:hover #dropdown_menu{
+  position:relative;
+  display:inline-block;
+}
+#dropdown_menu a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
 
 hr{
   width:100%;
+}
+
+#index_nav_links {
+  max-width:200px;
 }
 
 /* css sucks, but not as much as JavaScript */
@@ -121,14 +148,41 @@ hr{
 .span_1_of_12 {
   	width: 6.866%;
 }
- 
+
+.navbox{
+  width:200px;
+  height:200px;
+  color:white;
+  border-radius:10px;
+  background:rgba(0,96,255,.8);
+  display:inline-block;
+  text-align:center;
+  margin:5px;
+  padding:2px;
+}
+.navbox:hover{
+  background:rgba(0,95,255,1);
+}
+.index_navigation{
+  width:100%;
+  text-align:center;
+  align-content:center
+}
+
 /*Below 790px wide search and navbar overlap. Fix?*/
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 800px) {
   #topbar{
     display: none;
   }
   #menu_button{
     display: block;
+    height: 40px;
+  }
+  #navbar{
+    padding: 15px;
+  }
+  #searchbar{
+    padding-top: 16px;
   }
 }
 
