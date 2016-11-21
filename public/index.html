@@ -11,13 +11,25 @@
     <meta name="keywords" content="web,web developement,project management,networking,cs146,html,css,javascript">
     
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    -->
     
   </head>
   <body>
     <header>
       <a href="index.html"><img id="headimg" src="../files/images/WDT.png" alt="WDT" /></a>
       <nav id="navbar">
-        <button id="menu_button"><img id="menu_icon" src="../files/images/menu_icon.png" alt="">Menu</button>
+        <div id="dropdown-container">
+          <button id="menu_button" class="dropnav"><img id="menu_icon" src="../files/images/menu_icon.png" alt="">Menu</button>
+          <div id="dropdown_menu">
+            <a href="about.html">About</a>
+            <a href="calculators.html">Calculators</a>
+            <a href="networking.html">Networking</a>
+            <a href="project-management.html">Project Management</a>
+            <a href="resources.html">Resources</a>
+          </div>
+        </div>
         <ul id="topbar">
           <a href="about.html"><li>About</li></a>
           <a href="calculators.html"><li>Calculators</li></a>
@@ -30,53 +42,40 @@
           <input type="Submit" />
         </form>
       </nav>
-          
       <hr />
     </header>
-      
-    <h1 align="center">The Web Developer's Toolkit</h1>
+    <h1 align="center">The Web Developer's Toolbox</h1>
     
-    
-    <div id="navbox">
-      
+    <div class="index_navigation">
+      <a href="calculators.html">
+      <div class="navbox">
+        <h3>Calculators</h3>
+        Base conversion, subnetting, host calculating, and IP address conversion and
+        for web developers.
+      </div>
+      </a>
+      <a href="networking.html">
+      <div class="navbox">
+        <h3>Networking</h3>
+        Information for help with the topic of networking. Learn about basic
+        networking and internet protocols.
+      </div>
+      </a>
+      <a href="project-management.html">
+      <div class="navbox">
+        <h3>Project Management</h3>
+        Information for help with the topic of project management. Learn the basics
+        of managing software projects.
+      </div>
+      </a>
+      <a href="resources.html">
+      <div class="navbox">
+        <h3>Resources</h3>
+        Online tutorials and resources for HTML, CSS and JavaScript, as well as
+        sgeneral web developement.
+      </div>
+      </a>
     </div>
-    <!-- Additional information navigation table -->
-    <table border="1" align="center" width="75%">
-      <tr>
-        <td align="center">
-          <a href="calculators.html">Calculators</a>
-        </td>
-        <td align="center">
-          <a href="networking.html">Networking</a>
-        </td>
-        <td align="center">
-          <a href="project-management.html">Project Management</a>
-        </td>
-        <td align="center">
-          <a href="resources.html">Resources</a>
-        </td>
-      </tr>
-      <tr>
-        <td align="center">
-          Base conversion, subnetting and IP address calculation tools
-          for web developers.
-        </td>
-        <td align="center">
-          Information for help with the topic of networking. Learn and
-          practice networking!
-        </td>
-        <td align="center">
-          Information for help with the topic of project management. 
-          Learn project management!
-        </td>
-        <td align="center">
-          Online tutorials and resources for HTML, CSS and
-          JavaScript, as well as general web developement.
-      </tr>
-    </table>
-
-    <br>
-    
     <footer>
       <hr width="100%">
         <table width="100%">
@@ -104,7 +103,7 @@
     Consider bootstrap template integration (if allowed)
     Consider: Is there a need for database or webserver?
         Possible options: bluebird, firebase, sql
-    Design meeting: CSS
+    Design meeting: CSSs
     All of the JavaScript (I should really start that).
     Search input tag/type?
 -->

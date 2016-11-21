@@ -17,6 +17,16 @@
     <header>
       <a href="index.html"><img id="headimg" src="../files/images/WDT.png" alt="WDT" /></a>
       <nav id="navbar">
+        <div id="dropdown-container">
+          <button id="menu_button" class="dropnav"><img id="menu_icon" src="../files/images/menu_icon.png" alt="">Menu</button>
+          <div id="dropdown_menu">
+            <a href="about.html">About</a>
+            <a href="calculators.html">Calculators</a>
+            <a href="networking.html">Networking</a>
+            <a href="project-management.html">Project Management</a>
+            <a href="resources.html">Resources</a>
+          </div>
+        </div>
         <ul id="topbar">
           <a href="about.html"><li>About</li></a>
           <a href="calculators.html"><li>Calculators</li></a>
@@ -29,8 +39,7 @@
           <input type="Submit" />
         </form>
       </nav>
-          
-      <hr width="100%"/>
+      <hr />
     </header>
     
     <h1>About Us</h1>
@@ -63,9 +72,23 @@
         <legend>Contact Us:</legend>
         <input type="text" placeholder="Name"><br>
         <input type="text" placeholder="Email"><br>
+        Gender:<br>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other<br>
         Message:<br>
         <input type="textarea"/><br>
+        <select name="Continent">
+          <option value="namer">North America</option>
+          <option value="samer">South America</option>
+          <option value="eur">Europe</option>
+          <option value="afr">Africa</option>
+          <option value="aus">Australia</option>
+          <option value="asi">Asia</option>
+          <option value="ant">Antarctica</option>
+        </select><br>
         <input type="submit">
+        <input type="reset">
       </fieldset>
     </form>
         
