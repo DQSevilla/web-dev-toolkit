@@ -9,7 +9,7 @@ developers. Much of the content from CS 146 is included in this site.
 All images and other resource files are stored in the files folder and subfolders.
 All JavaScript, front end or back end, are stored in a seperate js folder. Any
 CSS stlye sheets are in a css folder, and all of the publicly displayed HTML documents
-are in the public folder. Our homepage is `index.html`
+are in the public folder. Our homepage is [index.html](public/index.html)
 
 ## Functionalities
 (functionalities)
