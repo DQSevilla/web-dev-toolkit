@@ -1,32 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 * {
-  /*font-family: 'Roboto', sans-serif;*/
-}
-body{
-  background-color:#E7CD7E;
-}
-a{
-  text-decoration:none;
+  font-family: 'Roboto', sans-serif;
 }
 
-#contactus{
+/* HTML Tags */
+
+body {
+  /* Original: #E7CD7E */
+  /* Possible: FF7043 (orange), 90A4AE (blue&gray) */
+  background-color: #525252;
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration:none;
+  color:white; /* Added to preserve color */
+}
+
+h1.title {
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+}
+
+/* General IDs */
+
+#contactus {
   margin-left:10px;
   margin-right:10px;
 }
 
-#headimg{
+#headimg {
   display:inline;
   width:30%;
-  max-width:264px;
-} 
+  max-width:224px; /* Was 264px */
+}
 
-#navbar{
+#index_nav_links {
+  max-width:200px;
+}
+
+/* Navigation IDs */
+
+#navbar {
   position:relative;
 }
-#topbar{
+
+#topbar {
   left:0;
   padding-left:0;
 }
-#topbar li{
+
+#topbar li {
   background-color:#0060FF;
   color:white;
   padding:10px;
@@ -34,15 +62,18 @@ a{
   float:left;
   font-size:large;
 }
-#topbar li:hover{
+
+#topbar li:hover {
   background-color:teal;
 }
-#searchbar{
+
+#searchbar {
   right:0;
   position: absolute;
   top:7px;
 }
-#menu_button{
+
+#menu_button {
   display:none;
   background-color:#0060FF;
   color:white;
@@ -50,20 +81,25 @@ a{
   font-size:large;
   border:none;
 }
-#menu_button:hover{
+
+#menu_button:hover {
   background-color: teal;
 }
-#menu_icon{
+
+#menu_icon {
   height: 21px;
 }
-#dropdown_menu{
+
+#dropdown_menu {
   display:none;
 }
-#dropdown-container:hover #dropdown_menu{
+
+#dropdown-container:hover #dropdown_menu {
   position:absolute;
   display:inline-block;
 }
-#dropdown_menu a{
+
+#dropdown_menu a {
   color: white;
   padding: 12px 16px;
   text-decoration: none;
@@ -71,88 +107,14 @@ a{
   text-align: left;
   background-color:#0060FF;
 }
-#dropdown_menu a:hover{
+
+#dropdown_menu a:hover {
   background-color:teal;
 }
 
-hr{
-  width:100%;
-}
+/* Classes */
 
-#index_nav_links {
-  max-width:200px;
-}
-
-/* css sucks, but not as much as JavaScript */
-
-/*  SECTIONS  */
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
-
-/*  COLUMN SETUP  */
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-}
-.col:first-child { margin-left: 0; }
-
-/*  GROUPING  */
-.group:before,
-.group:after { content:""; display:table; }
-.group:after { clear:both;}
-/*  GRID OF TWELVE  */
-.span_12_of_12 {
-	width: 100%;
-}
-
-.span_11_of_12 {
-  	width: 91.53%;
-}
-.span_10_of_12 {
-  	width: 83.06%;
-}
-
-.span_9_of_12 {
-  	width: 74.6%;
-}
-
-.span_8_of_12 {
-  	width: 66.13%;
-}
-
-.span_7_of_12 {
-  	width: 57.66%;
-}
-
-.span_6_of_12 {
-  	width: 49.2%;
-}
-
-.span_5_of_12 {
-  	width: 40.73%;
-}
-
-.span_4_of_12 {
-  	width: 32.26%;
-}
-
-.span_3_of_12 {
-  	width: 23.8%;
-}
-
-.span_2_of_12 {
-  	width: 15.33%;
-}
-
-.span_1_of_12 {
-  	width: 6.866%;
-}
-
-.navbox{
+.navbox {
   width:200px;
   height:200px;
   color:white;
@@ -163,14 +125,64 @@ hr{
   margin:5px;
   padding:2px;
 }
-.navbox:hover{
+
+.navbox:hover {
   background:rgba(0,95,255,1);
 }
-.index_navigation{
+
+.index_navigation {
   width:100%;
   text-align:center;
   align-content:center
 }
+
+.resourcebox {
+  width: 300px;
+  height: 300px;
+  color: white;
+  border-radius: 10px;
+  background: rgba(0, 96, 255, .8);
+  display: inline-block;
+  text-align: center;
+  margin: 5px;
+  padding: 2px;
+}
+
+/* Responsive Web Design */
+
+/* SECTIONS */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* COLUMN SETUP */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/* GROUPING */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+
+/* GRID OF TWELVE */
+.span_12_of_12 {width: 100%;}
+.span_11_of_12 {width: 91.53%;}
+.span_10_of_12 {width: 83.06%;}
+.span_9_of_12 {width: 74.6%;}
+.span_8_of_12 {width: 66.13%;}
+.span_7_of_12 {width: 57.66%;}
+.span_6_of_12 {width: 49.2%;}
+.span_5_of_12 {width: 40.73%;}
+.span_4_of_12 {width: 32.26%;}
+.span_3_of_12 {width: 23.8%;}
+.span_2_of_12 {width: 15.33%;}
+.span_1_of_12 {width: 6.866%;}
 
 /*Below 790px wide search and navbar overlap. Fix?*/
 @media only screen and (max-width: 800px) {
@@ -193,7 +205,10 @@ hr{
 @media only screen and (max-width: 480px) {
 	.col {  margin: 1% 0 1% 0%; }
     
-    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
-	width: 100%; 
+    .span_1_of_12, .span_2_of_12, .span_3_of_12,
+    .span_4_of_12, .span_5_of_12, .span_6_of_12,
+    .span_7_of_12, .span_8_of_12, .span_9_of_12,
+    .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+	   width: 100%; 
 	}
 }

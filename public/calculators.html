@@ -11,14 +11,18 @@
     <meta name="keywords" content="web,web developement,project management,networking,cs146,html,css,javascript">
     
     <link rel="stylesheet" type="text/css" href="style.css">
-    
   </head>
   <body>
+    <!-- Header and navigation -->
     <header>
       <a href="index.html"><img id="headimg" src="../files/images/WDT.png" alt="WDT" /></a>
       <nav id="navbar">
+        <!-- Dropdown Menu Content -->
         <div id="dropdown-container">
-          <button id="menu_button" class="dropnav"><img id="menu_icon" src="../files/images/menu_icon.png" alt="">Menu</button>
+          <button id="menu_button" class="dropnav">
+            <img id="menu_icon" src="../files/images/menu_icon.png" alt="">
+            Menu
+          </button>
           <div id="dropdown_menu">
             <a href="about.html">About</a>
             <a href="calculators.html">Calculators</a>
@@ -27,18 +31,20 @@
             <a href="resources.html">Resources</a>
           </div>
         </div>
+        <!-- Regular List Navigation Content -->
         <ul id="topbar">
-          <a href="about.html"><li>About</li></a>
-          <a href="calculators.html"><li>Calculators</li></a>
-          <a href="networking.html"><li>Networking</li></a>
-          <a href="project-management.html"><li>Project Management</li></a>
-          <a href="resources.html"><li>Resources</li></a>
+          <li><a href="about.html">About</a></li>
+          <li><a href="calculators.html">Calculators</a></li>
+          <li><a href="networking.html">Networking</a></li>
+          <li><a href="project-management.html">Project Management</a></li>
+          <li><a href="resources.html">Resources</a></li>
         </ul>
         <form id="searchbar">
           <input type="text" name="search" placeholder="Search the Site" autofocus/>
           <input type="Submit" />
         </form>
       </nav>
+      <br><br>
       <hr />
     </header>
     
@@ -66,27 +72,13 @@
     <br>
     <b>Insert Networking Tool here. This will be made using JavaScript</b>
     
-    <br> <br>
+    <br>
     
-    <footer>
-      <hr width="100%">
-        <table width="100%">
-          <tr>
-            <td>
-              <font size="2">
-                CS 146-A<br />
-                &copy; 2016 Team 11 - Matthew Doto | David Sevilla | 
-                Benjamin Rose | Zitong Zhao
-              </font>
-            </td>
-            <td width="25%">
-              <right> <font size="2">
-                We pledge our honor that we have abided by the Stevens Honor 
-                System<br /> -- Team 11 
-              </font> </right>
-            </td>
-          </tr>
-        </table>
+    <hr>
+    <footer id="footer_content">
+      CS 146-A <br>
+      &copy; 2016 Team 11 - Matthew Doto | David Sevilla | Benjamin Rose | Ziton Zhao <br>
+      We pledge our honor that we have abided by the Stevens Honor System - Team 11
     </footer>
   </body>
 </html>
