@@ -1,6 +1,48 @@
 /** Base Conversion functions for the Calculators page */
 
 /**
+ * Converts a number to a different base representation
+ * based on form input from user
+ */ 
+function calculate() {
+    var num = document.getElementById("startNumber").value.trim();
+    var startBase = getBase(document.getElementById("startBase").value);
+    var endBase = getBase(document.getElementById("endBase").value);
+    
+    var result;
+    if(startBase === 10) {
+        result = fromDecimal(parseInt(num), endBase);
+    }
+    else if(startBase === 2) {
+        result = fromBinary(num, endBase);
+    }
+    else if(startBase === 8) {
+        result = fromOctal(num, endBase);
+    }
+    else {
+        result = fromHexadecimal(num, endBase);
+    }
+    var str = "(" + num + ")<sub>" + startBase + "</sub> = " + "(" + result + ")<sub>" + endBase + "</sub>";
+    
+    document.getElementById("result").innerHTML = str;
+    document.getElementById("results_wrapper").style.display = "block";
+}
+
+function getBase(str) {
+    if(str.includes("2")) {
+        return 2;
+    }
+    if(str.includes("10")) {
+        return 10;
+    }
+    if(str.includes("8")) {
+        return 8;
+    }
+    return 16;
+}
+
+
+/**
  * Converts a decimal number to a given base representation.
  * @param {number} dec - a base 10 number
  * @param {number} newBase - the new base

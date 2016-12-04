@@ -10,7 +10,7 @@
     <meta name="description" content="Provides web developement tools and resources to students and self-learners">
     <meta name="keywords" content="web,web developement,project management,networking,cs146,html,css,javascript">
     
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body>
     <!-- Header and navigation -->
@@ -40,8 +40,8 @@
           <li><a href="resources.html">Resources</a></li>
         </ul>
         <form id="searchbar">
-          <input type="text" name="search" placeholder="Search the Site" autofocus/>
-          <input type="Submit" />
+          <input type="text" name="search" id="searchbox" placeholder="Search the Site" autofocus/>
+          <input type="button" value="Submit" onclick="test()"/>
         </form>
       </nav>
       <br><br>
@@ -110,5 +110,7 @@
       &copy; 2016 Team 11 - Matthew Doto | David Sevilla | Benjamin Rose | Zitong Zhao <br>
       We pledge our honor that we have abided by the Stevens Honor System - Team 11
     </footer>
+    
+    <script type="text/javascript" src="../js/search.js"></script>
   </body>
 </html>

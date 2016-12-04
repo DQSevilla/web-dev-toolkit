@@ -10,7 +10,7 @@
     <meta name="description" content="Provides web developement tools and resources to students and self-learners">
     <meta name="keywords" content="web,web developement,project management,networking,cs146,html,css,javascript">
     
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body>
     <!-- Header and navigation -->
@@ -40,8 +40,8 @@
           <li><a href="resources.html">Resources</a></li>
         </ul>
         <form id="searchbar">
-          <input type="text" name="search" placeholder="Search the Site" autofocus/>
-          <input type="Submit" />
+          <input type="text" name="search" id="searchbox" placeholder="Search the Site" autofocus/>
+          <input type="button" value="Submit" onclick="test()"/>
         </form>
       </nav>
       <br><br>
@@ -61,6 +61,7 @@
         <h3>Project Management</h3>
         <a href="../files/powerpoints/cs146_w5.pdf" target="_blank">Introduction to Project Management</a>
       </div>
+      
       <div class="resourcebox">
         <h3>HTML5</h3>
         <a href="http://www.w3schools.com/html/default.asp" target="_blank">Learn HTML: w3schools</a><br>
@@ -68,16 +69,34 @@
         <a href="../files/powerpoints/cs146_w6a.pdf" target="_blank">Introduction to HTML5</a><br>
         <a href="../files/powerpoints/cs146_w6b.pdf" target="_blank">Introduction to HTML5 II</a><br>
         <a href="../files/powerpoints/cs146_w7a.pdf" target="_blank">Introduction to HTML5 III</a><br>
-        <br><br><br><br><br> <!-- For even alignment -->
+        <a href="../files/powerpoints/cs146_w10b.pdf" target="_blank">Introduction to HTML Forms</a><br>
+        <a href="../files/powerpoints/cs146_w11a.pdf" target="_blank">Introduction to HTML Forms II</a><br>
+        <br><br><br> <!-- For even alignment -->
       </div>
+      
       <div class="resourcebox">
         <h3>CSS3</h3>
         <a href="http://www.w3schools.com/css/default.asp" target="_blank">Learn CSS: w3schools</a><br>
         <a href="../files/images/css3-cheat-sheet.pdf" target="_blank">CSS 3 Cheat Sheet</a><br>
         <a href="../files/powerpoints/cs146_w8a.pdf" target="_blank">Introduction to CSS</a><br>
         <a href="../files/powerpoints/cs146_w8b.pdf" target="_blank">Introduction to CSS II</a><br>
-        <a href="../files/powerpoints/cs146_w9a.pdf" target="_blank">Introduction to CSS III</a>
-        <br><br><br><br><br><br> <!-- For even alignment -->
+        <a href="../files/powerpoints/cs146_w9a.pdf" target="_blank">Introduction to CSS III</a><br>
+        <a href="../files/powerpoints/cs146_w9b.pdf" target="_blank">Introduction to CSS IV</a><br>
+        <a href="../files/powerpoints/cs146_w9c.pdf" target="_blank">Introduction to CSS V</a><br>
+        <a href="../files/powerpoints/cs146_w10a.pdf" target="_blank">Introduction to CSS VI</a><br>
+        <br><br> <!-- For even alignment -->
+      </div>
+      
+      <div class="resourcebox">
+        <h3>JavaScript</h3>
+        <a href="http://www.w3schools.com/js/" target="_blank">Learn JavaScript: w3schools</a><br>
+        <a href="../files/powerpoints/cs146_w12a.pdf" target="_blank">JavaScript</a><br>
+        <a href="../files/powerpoints/cs146_w12b.pdf" target="_blank">JavaScript II</a><br>
+        <a href="../files/powerpoints/cs146_w13.pdf" target="_blank">JavaScript III</a><br>
+        <a href="../files/powerpoints/cs146_w14.pdf" target="_blank">JavaScript IV</a><br>
+        <h3>Software Engineering</h3>
+        <a href="../files/powerpoints/cs146_w11bc.pdf" target="_blank">Introduction to Software Engineering</a>
+        <br><br> <!-- For even alignment -->
       </div>
     </div>
     
@@ -88,5 +107,7 @@
       &copy; 2016 Team 11 - Matthew Doto | David Sevilla | Benjamin Rose | Zitong Zhao <br>
       We pledge our honor that we have abided by the Stevens Honor System - Team 11
     </footer>
+    
+    <script type="text/javascript" src="../js/search.js"></script>
   </body>
 </html>

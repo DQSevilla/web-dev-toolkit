@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Web Developer's Toolkit</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Sevilla, Mathew Doto, Benjamin Rose, Zitong Zhao">
+    <meta name="description" content="Provides web developement tools and resources to students and self-learners">
+    <meta name="keywords" content="web,web developement,project management,networking,cs146,html,css,javascript">
+    
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+  </head>
+  <body>
+    <!-- Header and navigation -->
+    <header>
+      <a href="index.html"><img id="headimg" src="../files/images/WDT.png" alt="WDT" /></a>
+      <nav id="navbar">
+        <!-- Dropdown Menu Content -->
+        <div id="dropdown-container">
+          <button id="menu_button" class="dropnav">
+            <img id="menu_icon" src="../files/images/menu_icon.png" alt="">
+            Menu
+          </button>
+          <div id="dropdown_menu">
+            <a href="about.html">About</a>
+            <a href="calculators.html">Calculators</a>
+            <a href="networking.html">Networking</a>
+            <a href="project-management.html">Project Management</a>
+            <a href="resources.html">Resources</a>
+          </div>
+        </div>
+        <!-- Regular List Navigation Content -->
+        <ul id="topbar">
+          <li><a href="about.html">About</a></li>
+          <li><a href="calculators.html">Calculators</a></li>
+          <li><a href="networking.html">Networking</a></li>
+          <li><a href="project-management.html">Project Management</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+        <form id="searchbar" onsubmit="search(); return false;">
+          <input type="text" name="search" id="searchbox" placeholder="Search the Site" autofocus/>
+          <input type="button" value="Submit" onclick="test()"/>
+        </form>
+      </nav>
+      <br><br>
+      <hr />
+    </header>
+    
+    <p>This feature has not yet been implemented, however, you can enter queries
+    containing the following keywords to be redirected to the cooresponding pages:<br />
+    <br />
+    "Home" - > Redirects to index.html<br />
+    "About" - > Redirects to about.html<br />
+    "Calculators" - > Redirects to calculators.html<br />
+    "Networking" - > Redirects to networking.html<br />
+    "Project" or "Management" - > Redirects to project-management.html<br />
+    "Resources" - > Redirects to resources.html</p>
+    <hr />
+    <footer id="footer_content">
+      CS 146-A <br>
+      &copy; 2016 Team 11 - Matthew Doto | David Sevilla | Benjamin Rose | Zitong Zhao <br>
+      We pledge our honor that we have abided by the Stevens Honor System - Team 11
+    </footer>
+    
+    <script type="text/javascript" src="../js/search.js"></script>
+  </body>
+</html>

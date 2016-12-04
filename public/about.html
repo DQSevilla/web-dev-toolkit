@@ -10,7 +10,7 @@
     <meta name="description" content="Provides web developement tools and resources to students and self-learners">
     <meta name="keywords" content="web,web developement,project management,networking,cs146,html,css,javascript">
     
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body>
     <!-- Header and navigation -->
@@ -40,64 +40,69 @@
           <li><a href="resources.html">Resources</a></li>
         </ul>
         <form id="searchbar">
-          <input type="text" name="search" placeholder="Search the Site" autofocus/>
-          <input type="Submit" />
+          <input type="text" name="search" id="searchbox" placeholder="Search the Site" autofocus/>
+          <input type="button" value="Submit" onclick="test()"/>
         </form>
       </nav>
       <br><br>
       <hr />
     </header>
     
-    <h1>About Us</h1>
-    <h3>The Team</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum
-       eu nisi vitae sagittis. Morbi mattis diam eu imperdiet feugiat. Suspendisse
-       commodo tincidunt nisi, non condimentum quam cursus eget. Nulla nulla lorem,
-       volutpat eget auctor sed, mollis eget mauris. Sed eget malesuada magna.
-        Praesent posuere rutrum metus. Quisque sed libero posuere, maximus nisi non,
-        sodales erat. Mauris eu odio quis erat dignissim condimentum.</p>
-        
-    <h3>The Idea</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum
-       eu nisi vitae sagittis. Morbi mattis diam eu imperdiet feugiat. Suspendisse
-       commodo tincidunt nisi, non condimentum quam cursus eget. Nulla nulla lorem,
-       volutpat eget auctor sed, mollis eget mauris. Sed eget malesuada magna.
-        Praesent posuere rutrum metus. Quisque sed libero posuere, maximus nisi non,
-        sodales erat. Mauris eu odio quis erat dignissim condimentum.</p>
-    <h3>The Execution</h3>
+    <div>
+      <div id="about">
+        <h3>The Team</h3>
+        Each of our team members were selected at random to create this project. We each have
+        different paths we plan on taking and different goals for our lives. Coming together, we
+        have expanded our horizons and worked as peers and end as friends. We are all exceptionally
+        knoledgable and, by putting our heads together, have made up for each of our shortcomings
+        and have produced this masterpiece.
+        <br>
+        <h3>The Idea</h3>
+        In the time we have spent in this class, every student has witnessed and experienced hardships
+        with some of the material in this course. Everything from a long and tedious task, a 
+        problem as easily comprehensible as Latin, or just plain not understanding content.
+        The four of us decided to make a place, coming from each of our strengths and knowledge,
+        that will help not only our group, but other students in our class and in other classes
+        in the future.
+        <br>
+        <h3>The Execution</h3>
+        Bringing together an idea to help us and our peers develop knowledge was the easy part.
+        Figuring out what each of us knew and did not know was the tougher part. We each found,
+        through conversation and the execution of the project, our greatest strengths and our
+        hardest challenges. Out of the four of us, two were exceptional at programming, and the
+        others really broke down the concepts outside of the programming. We learned from each
+        other and all worked in every area to get this project done, and with the different
+        stregths we have all brought to this project, we have achieved our goal of helping each
+        other, and hope that our information helps you as well.
+      </div>
+      <div id="about_form">
+        <form id="contactus">
+          <fieldset>
+            <legend>Contact Us:</legend>
+            <input type="text" placeholder="Name" size="28"><br>
+            <input type="text" placeholder="Email" size="28"><br><br>
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" value="male" checked> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <input type="radio" name="gender" value="other"> Other<br>
+            <label>Message:</label><br>
+            <textarea name="message" placeholder="Send us a message" rows="5" cols="30"></textarea><br>
+            <select name="Continent">
+              <option value="namer">North America</option>
+              <option value="samer">South America</option>
+              <option value="eur">Europe</option>
+              <option value="afr">Africa</option>
+              <option value="aus">Australia</option>
+              <option value="asi">Asia</option>
+              <option value="ant">Antarctica</option>
+            </select><br><br>
+            <input type="submit">
+            <input type="reset">
+          </fieldset>
+        </form>
+      </div>
+    </div>
     
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vestibulum
-       eu nisi vitae sagittis. Morbi mattis diam eu imperdiet feugiat. Suspendisse
-       commodo tincidunt nisi, non condimentum quam cursus eget. Nulla nulla lorem,
-       volutpat eget auctor sed, mollis eget mauris. Sed eget malesuada magna.
-        Praesent posuere rutrum metus. Quisque sed libero posuere, maximus nisi non,
-        sodales erat. Mauris eu odio quis erat dignissim condimentum.</p>
-    
-    <form id="contactus">
-      <fieldset>
-        <legend>Contact Us:</legend>
-        <input type="text" placeholder="Name"><br>
-        <input type="text" placeholder="Email"><br>
-        Gender:<br>
-        <input type="radio" name="gender" value="male" checked> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-        <input type="radio" name="gender" value="other"> Other<br>
-        Message:<br>
-        <input type="text"/><br> <!-- Consider changing to text area -->
-        <select name="Continent">
-          <option value="namer">North America</option>
-          <option value="samer">South America</option>
-          <option value="eur">Europe</option>
-          <option value="afr">Africa</option>
-          <option value="aus">Australia</option>
-          <option value="asi">Asia</option>
-          <option value="ant">Antarctica</option>
-        </select><br>
-        <input type="submit">
-        <input type="reset">
-      </fieldset>
-    </form>
-        
     <br>
     
     <hr>
@@ -106,5 +111,7 @@
       &copy; 2016 Team 11 - Matthew Doto | David Sevilla | Benjamin Rose | Ziton Zhao <br>
       We pledge our honor that we have abided by the Stevens Honor System - Team 11
     </footer>
+    
+    <script type="text/javascript" src="../js/search.js"></script>
   </body>
 </html>

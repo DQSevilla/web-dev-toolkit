@@ -10,7 +10,7 @@
     <meta name="description" content="Provides web developement tools and resources to students and self-learners">
     <meta name="keywords" content="web,web developement,project management,networking,cs146,html,css,javascript">
     
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body>
     <!-- Header and navigation -->
@@ -40,37 +40,71 @@
           <li><a href="resources.html">Resources</a></li>
         </ul>
         <form id="searchbar">
-          <input type="text" name="search" placeholder="Search the Site" autofocus/>
-          <input type="Submit" />
+          <input type="text" name="search" id="searchbox" placeholder="Search the Site" autofocus/>
+          <input type="button" value="Submit" onclick="test()"/>
         </form>
       </nav>
       <br><br>
       <hr />
     </header>
     
-    <!-- Page content starts here -->
-    <h1>Base Conversion Calculator</h1>
-    <p>
-      Use the following tool to convert between the common number bases
-      that web developers and programmers are concerned with. The tool supports
-      conversion between decimal, binary, octal and hexadecimal numbers.
-      The calculator also supports converting from decimal to any number
-      base.
-    </p>
-    <br>
-    <b>Insert Base Converter Calculator tool here. This tool will me made using
-    JavaScript</b>
-    <br>
+    <div id="calc_wrapper">
+      <div id="calc_info">
+        <h1>Base Conversion Calculator</h1>
+        Use the following tool to convert between the common number bases
+        that web developers and programmers are concerned with. This tool supports
+        conversions between decimal, binary, octal and hexadecimal numbers. Learn more
+        about number bases <a href="https://en.wikipedia.org/wiki/Radix" target="_blank">
+        here</a>, and a tutorial <a href="../files/powerpoints/cs146_w2b(1).pdf" target="_blank">here</a>.
+      </div>
+      <div class="formWrapper">
+        <form name="baseConversionForm" autocomplete="off" method="get">
+          <fieldset>
+            <legend>Base Converter</legend>
+            <label for="startNumber" class="labelitem">Number:</label>
+            <input type="text" name="startNumber" id="startNumber" size="24" maxlength="32"
+            placeholder="Enter a number" required>
+            <br><br>
+            <label for="startBase" class="labelitem">From:</label>
+            <select name="startBase" id="startBase" required>
+              <option value="" selected disabled>Starting base</option>
+              <option value="Binary (Base 2)">Binary (Base 2)</option>
+              <option value="Octal (Base 8)">Octal (Base 8)</option>
+              <option value="Decimal (Base 10)">Decimal (Base 10)</option>
+              <option value="Hexadecimal (Base 16)">Hexadecimal (Base 16)</option>
+            </select>
+            <label for="endBase" class="labelitem">To:</label>
+            <select name="endBase" id="endBase" required>
+              <option value="" selected disabled>Final base</option>
+              <option value="Binary (Base 2)">Binary (Base 2)</option>
+              <option value="Octal (Base 8)">Octal (Base 8)</option>
+              <option value="Decimal (Base 10)">Decimal (Base 10)</option>
+              <option value="Hexadecimal (Base 16)">Hexadecimal (Base 16)</option>
+            </select>
+            <br> <br>
+            <input type="button" value="Submit" onclick="calculate();"/>
+            </fieldset>
+            <div id="results_wrapper">
+              <fieldset>
+                <legend>Result</legend>
+                <div id="result"></div>
+              </fieldset>
+            </div>
+        </form>
+      </div>
+    </div>
     
-    <h1>Networking Tools</h1>
-    <p>
-      Use the following tool to perform calculations based on networking
-      functionalities. Convert between IPv4 and IPv6, find the class of a
-      network, find it's possible number of subnets and hosts per subnet,
-      and more.
-    </p>
-    <br>
-    <b>Insert Networking Tool here. This will be made using JavaScript</b>
+    <div id="net_wrapper">
+      <div id="calc_info">
+        <h1>Networking Tools</h1>
+        Use the following tool to perform calculations based on networking
+        functionalities. Convert between IPv4 and IPv6, find the class of a
+        network, find it's possible number of subnets and hosts per subnet,
+        and more.
+        <br>
+        <b>Insert functioning calculator here</b>
+      </div>
+    </div>
     
     <br>
     
@@ -80,5 +114,8 @@
       &copy; 2016 Team 11 - Matthew Doto | David Sevilla | Benjamin Rose | Zitong Zhao <br>
       We pledge our honor that we have abided by the Stevens Honor System - Team 11
     </footer>
+    
+    <script type="text/javascript" src="../js/BaseConverter.js"></script>
+    <script type="text/javascript" src="../js/search.js"></script>
   </body>
 </html>
